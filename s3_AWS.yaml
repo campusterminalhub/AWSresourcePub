@@ -1,0 +1,15 @@
+---
+apiVersion: s3.aws.upbound.io/v1beta1
+kind: Bucket
+metadata:
+  name: crossplane-argo-ccp-bucket1
+spec:
+  forProvider:
+    region: us-east-1
+    tags:
+      owner: atal.mayank.bajpai
+      project: CCP
+      env: dev
+      aws: eks
+  providerConfigRef:
+    name: default
